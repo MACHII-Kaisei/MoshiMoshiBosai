@@ -1,5 +1,7 @@
 # もしもし防災
 
+https://www.moshimoshi-bousai.jp/
+
 このリポジトリは、学内ハッカソンで作成された「もしもし防災」のソースコードです。
 
 ## ハッカソン概要
@@ -10,7 +12,7 @@
   - チームラボ株式会社 様
   - GMOメディア株式会社 様
   - 株式会社サイバーエージェント 様
-  - 株式会社グッドパッチ 様
+  - ReDesigner for Student 様
 - **参加人数**: 全12チーム、計52人
 - **当チームの人数**: 4人
 - **実績**: 🏆 最優秀賞
@@ -38,4 +40,3 @@
 https://github.com/user-attachments/assets/0b7dd246-20d4-43d3-b608-b9a2548dd19c
 
 ![19](Presentation/19.png)
-![20](Presentation/20.png)
