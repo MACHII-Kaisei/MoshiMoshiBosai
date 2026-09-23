@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { collection, doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../firebase';
+import { db, missingFirebaseEnv } from '../firebase';
 import { MapPin, BadgeCheck, Info, Share } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -46,6 +46,11 @@ export default function Home() {
     const handleCreateRoom = async () => {
         if (!name.trim()) {
             alert('名前を入力してください');
+            return;
+        }
+
+        if (missingFirebaseEnv.length > 0) {
+            alert('サーバーの設定が不足しているため、現在ご利用いただけません。');
             return;
         }
 

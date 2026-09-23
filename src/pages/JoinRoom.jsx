@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { collection, doc, setDoc, getDoc } from 'firebase/firestore';
-import { db } from '../firebase';
+import { db, missingFirebaseEnv } from '../firebase';
 import { MapPin, BadgeCheck, Info } from 'lucide-react';
 
 export default function JoinRoom() {
@@ -28,6 +28,11 @@ export default function JoinRoom() {
         }
         if (isCohabiting === null) {
             alert('同居・別居を選択してください');
+            return;
+        }
+
+        if (missingFirebaseEnv.length > 0) {
+            alert('サーバーの設定が不足しているため、現在ご利用いただけません。');
             return;
         }
 
